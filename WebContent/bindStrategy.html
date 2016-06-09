@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="node_modules/angular/angular.js"></script>
+</head>
+<body>
+	<div ng-controller="bindController">
+		<my-directive my-url='{{url}}'  my-text='{{name}}'  my-object='userEntity' method="showName"></my-directive>
+		<my-directive2 case1='data[0]'></my-directive2>
+	</div>
+</body>
+<script src="js/bindStrategy.js">
+	
+</script>
+</html>

@@ -1,0 +1,12 @@
+.text-red{
+	background-color: red;
+}
+.text-green{
+	background-color: green;
+}
+.error{
+	background-color:red;
+}
+.warning{
+	background-color: yellow;
+}

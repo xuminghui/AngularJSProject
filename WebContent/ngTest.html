@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="ngTest">
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+	<label>disabled text:</label>
+	<input  ng-model="someProperty" type="text" placeholder="test"></input>
+	<button ng-model="button" ng-disabled="!someProperty">AButton</button><br/>
+	
+	<textarea ng-disabled="isDisabled">Wait5Seconds</textarea><br/>
+	
+	Type here to make sibling readOnly:
+	<input type="text" ng-model="someProperty"></input>
+	<input type="text" ng-readonly="someProperty" value="some text here"></input><br/>
+	
+	<label>someProperty {{someProperty2}}: </label>
+	<input type="checkbox" ng-checked="someProperty2" ng-init="someProperty2=true" ng-model="someProperty2"></input>
+	<br/>
+	
+	<label>Select Two Fish:</label> 
+	<input type="checkbox" ng-model="isTwoFish"></input><br/>
+	<select>
+		<option>One Fish</option>
+		<option ng-selected="isTwoFish"> Two Fish</option>
+	</select> <br/>
+	
+	
+	<a ng-href="{{ myHref }}"> lucky man</a><br/>
+	<a href="{{ myHref }}"> feeling 404</a><br/>
+	
+	<h1>WrongWay</h1> <img src="{{imgSrc}}"/>  
+	<h1>Rightway</h1> <img ng-src="{{imgSrc}}"/> <br/>
+
+	<p>了子控制器是复制而非引用value</p>
+	<div ng-controller="parentCtrl">
+		{{ someModel.somevalue }}
+		<button ng-click="someAction()">Communicate to child</button>
+		<div ng-controller="childCtrl">
+			{{ someModel.somevalue }}
+			<button ng-click="childAction()">Communicate to parent</button> 
+		</div>
+	</div>
+	
+	<p>ng-switch</p>
+	<input type="text" ng-model="person.name"></input>
+	<div ng-switch on="person.name">
+		<p ng-swithc-default>And the winner is </p>
+		<h1 ng-switch-when="Ari">{{person.name}}</h1>
+	</div><br/>
+
+		
+		<div ng-init="greeting='ngBind helloworld'">
+			ng-bind使用
+			<p ng-bind="greeting"></p>
+		</div>
+	<p>ng-include 未实现</p>
+	<div ng-include="include.html"></div>
+
+</body>
+<script src="node_modules/angular/angular.js"></script>
+<script src="js/ngTest.js"></script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="PeopleModule">
+	<div class="container-fluid">
+		<ul ng-controller="PeopleController"
+			class="list-group col-md-offset-3 col-md-6">
+			<li ng-repeat="person in people" class="list-group-item"><span
+				class="badge">14</span> {{person.name}} lives in {{ person.city }}</li>
+		</ul>
+		
+	</div>
+	<div class="container-fluid" style="border-color: red;border-style: solid;">
+		<input type="text"></input>
+	</div>
+</body>
+<script src="node_modules/angular/angular.js"></script>
+<script src="js/NgRepeat.js"></script>
+</html>

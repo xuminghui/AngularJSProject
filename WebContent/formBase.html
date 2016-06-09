@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.css">
+</style>
+</head>
+<body ng-app="myApp">
+	<form name="myForm" ng-submit="save()" ng-controller="myController"
+		novalidate>
+		<input type="text" name="userName" ng-model="user.userName" required
+			ng-minlength="5" ng-maxlength="20" ng-pattern="[a-zA-z]"></input>
+		<div class="error" ng-show="myForm.userName.$dirty && myForm.userName.$invalid">
+        <small class="error" ng-show="myForm.userName.$error.required">Please input a username</small>
+        <small class="error" ng-show="myForm.userName.$error.minlength">Your username is required to be at least 3 characters</small>
+        <small class="error" ng-show="myForm.userName.$error.maxlength">Your username cannot be longer than 20 characters</small>
+        <small class="error" ng-show="myForm.userName.$error.unique">That username is taken, please try another</small>
+      </div>
+		<input type="password" name="password" ng-model="user.password"
+			required></input> <input type="email" name="email"
+			ng-model="user.email" required></input> <input type="number"
+			name="age" ng-model="user.age" required placeholder="验证是否为数字"></input>
+		<input type="url" name="homepage" ng-model="user.url" /> <input
+			type="submit" ng-disabled="myForm.$invalid"></input>
+	</form>
+</body>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="js/formBase.js"></script>
+</html>

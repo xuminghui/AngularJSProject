@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="node_modules/angular/angular.js"></script>
+</head>
+<body>
+	<p>we can access {{rootProperty}}</p>
+	<div id="parentCtrl" ng-controller="parent">
+		<p>we can access:{{ rootProperty }} and {{ parentProperty }}</p>
+		<div id="childCtrl" ng-controller="child">
+			<p>
+				we can access {{ rootProperty }} and {{ parentProperty }} and {{ childProperty }}
+			</p>
+		</div>
+	</div>
+</body>
+<script src="js/scope.js">
+</script>
+</html>
