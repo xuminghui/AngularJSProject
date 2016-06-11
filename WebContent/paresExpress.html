@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<style>
+body {
+	padding-top: 50px;
+}
+</style>
+</head>
+<body class="container" ng-app="app" ng-controller="parseExpressCtrl">
+	<div>
+		<input ng-model="expr" type="text" placeholder="enter an expression"></input><br/>
+		<div>{{exprParsed}}</div>
+		<input ng-model="name" type="text"></input>
+		<h2>{{name}}</h2>
+	</div>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="js/parseExpress.js"></script>
+</body>
+</html>

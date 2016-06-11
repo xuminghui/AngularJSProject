@@ -10,6 +10,19 @@
 	</h1>
 	<input type="text" ng-model="myUrl" ></input>
 	<div my-directive my-url="http://www.baidu.com" my-text="百度"></div>
+	
+	
+	<div>验证输入框内容的指令</div>
+	<div><input type="text" test-directive></input></div>
+	
+	
+	<div>验证transclude</div>
+	<div test-transclude title="测试transclude" >
+		<ul>
+			<li>First link</li>
+			<li>Second link</li>
+		</ul>
+	</div>
 </body>
 <script src="node_modules/angular/angular.js"></script>
 <script src="js/directive.js"></script>

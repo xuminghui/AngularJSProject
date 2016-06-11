@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<style>
+body {
+	padding-top: 50px;
+}
+</style>
+</head>
+<body class="container" ng-app="app" ng-controller="MainCtrl as main">
+	<form name="userForm" novalidate>
+		<div class="form-group"
+			ng-class="{'has-error':userForm.name.$touched && userForm.name.$invalid}">
+			<label>用户名</label> <input 
+				ng-class="{error: userForm.name.$dirty && userName.name.$invalid}"
+				type="text" placeholder="Name" name="name" ng-model="userName.name"
+				ng-minlength="3" ng-maxlength="20" required ng-focus />
+			<div class="error"
+				ng-show="signup_form.name.$dirty && signup_form.name.$invalid && !signup_form.name.$focused"
+				 ng-messages=userForm.name.$error">
+				<p ng-message="minlength">用户名最小长度5</p>
+				<p ng-message="maxlength">用户名最大长度10</p>
+				<p ng-message="required">用户名必填</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-danger">提交</button>
+		</div>
+	</form>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-messages/angular-messages.js"></script>
+	<script src="js/ngFocus.js"></script>
+</body>
+</html>
