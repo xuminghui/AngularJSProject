@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="container" ng-app="myApp">
+	<div ng-Controller="promiseController">
+	</div>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp',[]).controller('promiseController',['$q',function($q){
+		var test=function(){
+			  var deferred = $q.defer();
+			  setTimeout(function() {
+			    deferred.notify('About to greet ' + name + '.');
+
+			    if (true) {
+			      deferred.resolve('Hello, ' + name + '!');
+			    } else {
+			      deferred.reject('Greeting ' + name + ' is not allowed.');
+			    }
+			  }, 1000);
+
+			  return deferred.promise;
+			
+		}}]
+		var promise = test('Robin Hood');
+		promise.then(function(greeting) {
+		  alert('Success: ' + greeting);
+		}, function(reason) {
+		  alert('Failed: ' + reason);
+		}, function(update) {
+		  alert('Got notification: ' + update);
+		});
+	});
+	
+
+	
+	</script>
+</body>
+</html>
+
+
