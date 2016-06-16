@@ -11,31 +11,24 @@
 	</div>
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script type="text/javascript">
-	angular.module('myApp',[]).controller('promiseController',['$q',function($q){
-		var test=function(){
-			  var deferred = $q.defer();
-			  setTimeout(function() {
-			    deferred.notify('About to greet ' + name + '.');
-
-			    if (true) {
-			      deferred.resolve('Hello, ' + name + '!');
-			    } else {
-			      deferred.reject('Greeting ' + name + ' is not allowed.');
-			    }
-			  }, 1000);
-
-			  return deferred.promise;
-			
-		}}]
-		var promise = test('Robin Hood');
-		promise.then(function(greeting) {
-		  alert('Success: ' + greeting);
-		}, function(reason) {
-		  alert('Failed: ' + reason);
-		}, function(update) {
-		  alert('Got notification: ' + update);
+	angular.module('myApp',[]).controller('promiseController',['$scope','$http',function($scope,$http){
+		var promise=$http({
+			method:'get',
+			url:'http://172.16.20.146:8081/testAjax2',
+			//timeout:2000
+			cache:true
 		});
-	});
+		var i=100;
+		while(i<100){
+			i++;
+		};
+		promise.then(function(response){
+			alert('success');
+		},function(response){
+			alert(response.status);
+		});
+	}]
+	)
 	
 
 	

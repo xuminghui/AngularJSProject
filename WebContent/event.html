@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+	<div ng-controller="eventController">
+		<label>双击事件：</label>
+		<div ng-dblClick='dblClick()'>请双击</div>
+		<label>change事件：</label>
+		<input type="text" ng-model="text" ng-change="change()" ng-minlength="5"/>
+		<div ng-controller="childEventController"></div>
+	</div>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="js/event.js"></script>
+</body>
+</html>
