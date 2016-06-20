@@ -1,0 +1,170 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'F:\\nodejs\\node.exe',
+1 verbose cli   'F:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular-animate' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 verbose install initial load of F:\TOOL\git\repository\AngularJSProject\WebContent\package.json
+5 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\angular\package.json
+6 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\angular-messages\package.json
+7 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\angular-route\package.json
+8 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\angular-ui-grid\package.json
+9 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\bootstrap\package.json
+10 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\font-awesome\package.json
+11 verbose installManyTop reading scoped package data from F:\TOOL\git\repository\AngularJSProject\WebContent\node_modules\jquery\package.json
+12 verbose readDependencies loading dependencies from F:\TOOL\git\repository\AngularJSProject\WebContent\package.json
+13 silly cache add args [ 'angular-animate', null ]
+14 verbose cache add spec angular-animate
+15 silly cache add parsed spec Result {
+15 silly cache add   raw: 'angular-animate',
+15 silly cache add   scope: null,
+15 silly cache add   name: 'angular-animate',
+15 silly cache add   rawSpec: '',
+15 silly cache add   spec: '*',
+15 silly cache add   type: 'range' }
+16 silly addNamed angular-animate@*
+17 verbose addNamed "*" is a valid semver range for angular-animate
+18 silly addNameRange { name: 'angular-animate', range: '*', hasData: false }
+19 silly mapToRegistry name angular-animate
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/angular-animate
+23 verbose addNameRange registry:https://registry.npmjs.org/angular-animate not in flight; fetching
+24 verbose request uri https://registry.npmjs.org/angular-animate
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 16:08:25
+27 verbose request id 3ebd582bbb3e57b3
+28 http request GET https://registry.npmjs.org/angular-animate
+29 info retry will retry, error on last attempt: Error: read ECONNRESET
+30 info attempt registry request try #2 at 16:10:03
+31 http request GET https://registry.npmjs.org/angular-animate
+32 info retry will retry, error on last attempt: Error: read ECONNRESET
+33 info attempt registry request try #3 at 16:13:45
+34 http request GET https://registry.npmjs.org/angular-animate
+35 http 200 https://registry.npmjs.org/angular-animate
+36 silly get cb [ 200,
+36 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+36 silly get     etag: '"OYIX2430NRUQWA4NDHR17RS3"',
+36 silly get     'content-type': 'application/json',
+36 silly get     'content-encoding': 'gzip',
+36 silly get     'cache-control': 'max-age=300',
+36 silly get     'content-length': '10857',
+36 silly get     'accept-ranges': 'bytes',
+36 silly get     date: 'Mon, 20 Jun 2016 08:13:51 GMT',
+36 silly get     via: '1.1 varnish',
+36 silly get     age: '137',
+36 silly get     connection: 'keep-alive',
+36 silly get     'x-served-by': 'cache-ams4138-AMS',
+36 silly get     'x-cache': 'HIT',
+36 silly get     'x-cache-hits': '1',
+36 silly get     'x-timer': 'S1466410431.413529,VS0,VE0',
+36 silly get     vary: 'Accept-Encoding' } ]
+37 verbose get saving angular-animate to C:\Users\xuminghui\AppData\Roaming\npm-cache\registry.npmjs.org\angular-animate\.cache.json
+38 silly addNameRange number 2 { name: 'angular-animate', range: '*', hasData: true }
+39 silly addNameRange versions [ 'angular-animate',
+39 silly addNameRange   [ '0.0.1',
+39 silly addNameRange     '0.0.2',
+39 silly addNameRange     '1.2.19-build.256',
+39 silly addNameRange     '1.2.16',
+39 silly addNameRange     '1.2.23',
+39 silly addNameRange     '1.3.0-rc.5',
+39 silly addNameRange     '1.3.0',
+39 silly addNameRange     '1.3.1',
+39 silly addNameRange     '1.3.2',
+39 silly addNameRange     '1.3.3',
+39 silly addNameRange     '1.3.4-build.3588',
+39 silly addNameRange     '1.2.27',
+39 silly addNameRange     '1.3.4',
+39 silly addNameRange     '1.3.5',
+39 silly addNameRange     '1.3.6',
+39 silly addNameRange     '1.3.7',
+39 silly addNameRange     '1.2.28',
+39 silly addNameRange     '1.3.8',
+39 silly addNameRange     '1.4.0-beta.0',
+39 silly addNameRange     '1.3.9',
+39 silly addNameRange     '1.3.10',
+39 silly addNameRange     '1.4.0-beta.1',
+39 silly addNameRange     '1.4.0-beta.2',
+39 silly addNameRange     '1.3.11',
+39 silly addNameRange     '1.4.0-beta.3',
+39 silly addNameRange     '1.3.12',
+39 silly addNameRange     '1.3.13',
+39 silly addNameRange     '1.4.0-beta.4',
+39 silly addNameRange     '1.3.14',
+39 silly addNameRange     '1.4.0-beta.5',
+39 silly addNameRange     '1.4.0-beta.6',
+39 silly addNameRange     '1.3.15',
+39 silly addNameRange     '1.4.0-rc.0',
+39 silly addNameRange     '1.4.0-rc.1',
+39 silly addNameRange     '1.4.0-rc.2',
+39 silly addNameRange     '1.4.0',
+39 silly addNameRange     '1.3.16',
+39 silly addNameRange     '1.4.1',
+39 silly addNameRange     '1.4.2',
+39 silly addNameRange     '1.3.17',
+39 silly addNameRange     '1.4.3',
+39 silly addNameRange     '1.4.4',
+39 silly addNameRange     '1.3.18',
+39 silly addNameRange     '1.4.5',
+39 silly addNameRange     '1.3.19',
+39 silly addNameRange     '1.4.6',
+39 silly addNameRange     '1.5.0-beta.0',
+39 silly addNameRange     '1.2.29',
+39 silly addNameRange     '1.3.20',
+39 silly addNameRange     '1.4.7',
+39 silly addNameRange     '1.5.0-beta.2',
+39 silly addNameRange     '1.4.8',
+39 silly addNameRange     '1.5.0-rc.0',
+39 silly addNameRange     '1.5.0-rc.1',
+39 silly addNameRange     '1.4.9',
+39 silly addNameRange     '1.5.0-rc.2',
+39 silly addNameRange     '1.5.0',
+39 silly addNameRange     '1.5.1',
+39 silly addNameRange     '1.4.10',
+39 silly addNameRange     '1.5.2',
+39 silly addNameRange     '1.5.3',
+39 silly addNameRange     '1.5.5',
+39 silly addNameRange     '1.4.11',
+39 silly addNameRange     '1.5.6',
+39 silly addNameRange     '1.4.12',
+39 silly addNameRange     '1.5.7' ] ]
+40 silly addNamed angular-animate@1.5.7
+41 verbose addNamed "1.5.7" is a plain semver version for angular-animate
+42 silly mapToRegistry name angular-animate
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry uri https://registry.npmjs.org/angular-animate
+46 verbose addRemoteTarball https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz not in flight; adding
+47 verbose addRemoteTarball [ 'https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz',
+47 verbose addRemoteTarball   '04e5d657416ed5ea2ad2ffe33c20c5529aa3922e' ]
+48 info retry fetch attempt 1 at 16:13:51
+49 info attempt registry request try #1 at 16:13:51
+50 http fetch GET https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz
+51 http fetch 200 https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz
+52 info retry will retry, error on last attempt: Error: read ECONNRESET
+53 info retry will retry, error on last attempt: Error: read ECONNRESET
+54 silly fetchAndShaCheck shasum 04e5d657416ed5ea2ad2ffe33c20c5529aa3922e
+55 verbose stack Error: shasum check failed for C:\Users\XUMING~1\AppData\Local\Temp\npm-756-6820564b\registry.npmjs.org\angular-animate\-\angular-animate-1.5.7.tgz
+55 verbose stack Expected: 04e5d657416ed5ea2ad2ffe33c20c5529aa3922e
+55 verbose stack Actual:   14512c8b718339c6ff26ec968966bdb57084fae1
+55 verbose stack From:     https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz
+55 verbose stack     at F:\nodejs\node_modules\npm\node_modules\sha\index.js:38:8
+55 verbose stack     at ReadStream.<anonymous> (F:\nodejs\node_modules\npm\node_modules\sha\index.js:85:7)
+55 verbose stack     at emitNone (events.js:72:20)
+55 verbose stack     at ReadStream.emit (events.js:166:7)
+55 verbose stack     at endReadableNT (_stream_readable.js:893:12)
+55 verbose stack     at doNTCallback2 (node.js:430:9)
+55 verbose stack     at process._tickCallback (node.js:344:17)
+56 verbose cwd F:\TOOL\git\repository\AngularJSProject\WebContent
+57 error Windows_NT 10.0.10586
+58 error argv "F:\\nodejs\\node.exe" "F:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-animate"
+59 error node v4.1.2
+60 error npm  v2.14.4
+61 error shasum check failed for C:\Users\XUMING~1\AppData\Local\Temp\npm-756-6820564b\registry.npmjs.org\angular-animate\-\angular-animate-1.5.7.tgz
+61 error Expected: 04e5d657416ed5ea2ad2ffe33c20c5529aa3922e
+61 error Actual:   14512c8b718339c6ff26ec968966bdb57084fae1
+61 error From:     https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.7.tgz
+62 error If you need help, you may report this error at:
+62 error     <https://github.com/npm/npm/issues>
+63 verbose exit [ 1, true ]

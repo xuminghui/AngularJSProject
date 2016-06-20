@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="userModule">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- 
+<link rel="icon" href="../../favicon.ico">
+ -->
+<link rel="styleSheet"
+	href="https://cdn.bootcss.com/angular-ui-grid/3.1.0/ui-grid.min.css" />
+<title>Jumbotron Template for Bootstrap</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script type="text/css">
+    .myGrid {
+        width: 500px;
+        height: 250px;
+      }
+	</script>
+</head>
+
+<body>
+	<div class="container" ng-controller="userController">
+		<button id='toggleGender' ng-click='toggleGender()' class="btn btn-success">Toggle Gender</button>
+		<div id="grid1" ui-grid="gridOptions1" ui-grid-edit class="myGrid"></div>
+	</div>
+	<script src="../node_modules/angular/angular.js"></script>
+	<script
+		src="https://cdn.bootcss.com/angular-touch/1.5.7/angular-touch.js"></script>
+	<script
+		src="https://cdn.bootcss.com/angular-ui-grid/3.1.0/ui-grid.min.js"></script>
+	<script src="js/table.js"></script>
+</body>
+</html>

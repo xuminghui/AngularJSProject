@@ -10,6 +10,7 @@ userInfoModel.controller('UserInfoCtrl', [ '$scope', function($scope) {
 		autoLogin : true
 	}
 	$scope.getFormData = function() {
+		alert($scope.userInfo.email);
 		console.log($scope.userInfo);
 	}
 	$scope.setFormData = function() {

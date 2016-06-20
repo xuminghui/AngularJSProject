@@ -22,7 +22,7 @@
 								邮箱：
 							</label>
 							<div class="col-md-10">
-								<input type="email" class="form-control" placeholder="推荐使用126邮箱" ng-model="userInfo.email">
+								<input type="email" class="form-control" placeholder="推荐使用126邮箱" ng-model="userInfo.email" ng-model-options="{debounce:1500}" ng-change=getFormData()>
 							</div>
 						</div>
 						<div class="form-group">
@@ -46,7 +46,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<button class="btn btn-default" ng-click="getFormData()">获取表单的值</button>
+								<button class="btn btn-default" ng-click="getFormData()" >获取表单的值</button>
 								<button class="btn btn-default" ng-click="setFormData()">设置表单的值</button>
 								<button class="btn btn-default" ng-click="resetFormData()">重置表单的值</button>
 								<button class="btn btn-default" ng-click="setColor()">设置颜色</button>
