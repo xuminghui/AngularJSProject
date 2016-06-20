@@ -6,7 +6,7 @@ userModule.controller('userController',['$scope','$http','uiGridConstants',funct
 		enableFiltering :true,
 		//headerTemplate: 'headerTemplate.html',
 		columnDefs:[
-		     { field: 'userName'},
+		     { field: 'userName',enableColumnMenu: false},
 		     { field: 'name' },
 		     { field: 'gender', enableSorting: false },
 		     { field: 'age', enableSorting: false },
