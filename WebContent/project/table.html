@@ -22,13 +22,17 @@
         width: 500px;
         height: 250px;
       }
+	.red { color: red; background-color: yellow}
 	</script>
 </head>
 
 <body>
 	<div class="container" ng-controller="userController">
-		<button id='toggleGender' ng-click='toggleGender()' class="btn btn-success">Toggle Gender</button>
-		<div id="grid1" ui-grid="gridOptions1" ui-grid-edit class="myGrid"></div>
+		<div id="grid" ui-grid="gridOptions" ui-grid-pagination  class="myGrid"></div>
+	 <!-- 
+	 	<span> &nbsp; &nbsp; First page: {{ firstPage }} &nbsp; &nbsp; Last page: {{ lastPage }}  &nbsp; &nbsp; data.length: {{ data.length }} </span>
+	 	<div ui-grid="gridOptions" ui-grid-infinite-scroll  class="myGrid"></div>
+	 	 -->
 	</div>
 	<script src="../node_modules/angular/angular.js"></script>
 	<script

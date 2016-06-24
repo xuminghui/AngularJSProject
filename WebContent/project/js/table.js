@@ -1,9 +1,18 @@
-var userModule=angular.module('userModule',['ui.grid','ui.grid.edit']);
+var userModule=angular.module('userModule',['ui.grid','ui.grid.edit','ui.grid.pagination']);
 userModule.controller('userController',['$scope','$http','uiGridConstants',function($scope,$http,uiGridConstants){
-	$scope.gridOptions1={
+	var paginationOptions = {
+		    pageNumber: 1,
+		    pageSize: 1,
+		    sort: null
+		  };
+	$scope.gridOptions={
+		paginationPageSizes: [1, 2, 3],
+		paginationPageSize: 1,
+		useExternalPagination: true,
+	    useExternalSorting: true,
 		enableSorting:true,
-		enableRowSelection: true,
-		enableFiltering :true,
+		//enableRowSelection: true,
+		//enableFiltering :true,
 		//headerTemplate: 'headerTemplate.html',
 		columnDefs:[
 		     { field: 'userName',enableColumnMenu: false},
@@ -15,24 +24,52 @@ userModule.controller('userController',['$scope','$http','uiGridConstants',funct
 		     { field: 'address', enableSorting: false ,enableFiltering :false}
 		],
 	    onRegisterApi: function( gridApi ) {
-	        $scope.grid1Api = gridApi;
+	        $scope.gridApi = gridApi;
+	        $scope.gridApi.core.on.sortChanged($scope, function(grid, sortColumns) {
+	            if (sortColumns.length == 0) {
+	              paginationOptions.sort = null;
+	            } else {
+	              paginationOptions.sort = sortColumns[0].sort.direction;
+	            }
+	            getPage();
+	          });
+	        gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
+	            paginationOptions.pageNumber = newPage;
+	            paginationOptions.pageSize = pageSize;
+	            getPage();
+	          });
 	    }
 		
 	}
-	$scope.toggleGender=function(){
-	    if( $scope.gridOptions1.data[2].gender === 'male' ) {
-	        $scope.gridOptions1.data[2].gender = 'female';
-	      } else {
-	        $scope.gridOptions1.data[2].gender = '333';
-	      };
-	      $scope.grid1Api.core.notifyDataChange( uiGridConstants.dataChange.EDIT );
-	}
-	$http({
+	/*$http({
 		method:'get',
 		url:'data/userList.txt'
 	}).then(function success(response){
 		$scope.gridOptions1.data=response.data;
 	},function failure(response){
 		
-	});
+	});*/
+	var getPage = function() {
+	    var url;
+	    switch(paginationOptions.sort) {
+	      case uiGridConstants.ASC:
+	        url = 'data/userList.txt';
+	        break;
+	      case uiGridConstants.DESC:
+	        url = 'data/userList.txt';
+	        break;
+	      default:
+	        url = 'data/userList.txt';
+	        break;
+	    }
+	 
+	    $http.get(url)
+	    .success(function (data) {
+	      $scope.gridOptions.totalItems = 100;
+	      var firstRow = (paginationOptions.pageNumber - 1) * paginationOptions.pageSize;
+	      $scope.gridOptions.data = data.slice(firstRow, firstRow + paginationOptions.pageSize);
+	    });
+	  };
+	 
+	  getPage();
 }]);
